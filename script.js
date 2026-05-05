@@ -265,11 +265,14 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.addEventListener('click', startGame);
     restartBtn.addEventListener('click', startGame);
 })
+
+// Запускаємо створення доларів кожні 300 мс
+setInterval(createDollar, 300);
 function createDollar() {
     const container = document.getElementById('money-container');
     const dollar = document.createElement('div');
     
-    dollar.innerText = '🎮'; // Можна замінити на '💰' або '💸'
+    dollar.innerText = '💵'; // Можна замінити на '💰' або '💸'
     dollar.classList.add('dollar');
     
     // Випадкова позиція від 0 до 100% ширини екрана
@@ -288,11 +291,6 @@ function createDollar() {
     setTimeout(() => {
         dollar.remove();
     }, duration * 1000);
-}
-
-// Запускаємо створення доларів кожні 300 мс
-setInterval(createDollar, 300);
-
 }
 
 // Запускаємо створення доларів кожні 300 мс

@@ -292,29 +292,7 @@ function createDollar() {
 
 // Запускаємо створення доларів кожні 300 мс
 setInterval(createDollar, 300);
-function createDollar() {
-    const container = document.getElementById('money-container');
-    const dollar = document.createElement('div');
-    
-    dollar.innerText = '💵'; // Можна замінити на '💰' або '💸'
-    dollar.classList.add('dollar');
-    
-    // Випадкова позиція від 0 до 100% ширини екрана
-    dollar.style.left = Math.random() * 100 + 'vw';
-    
-    // Випадкова тривалість падіння від 3 до 7 секунд
-    const duration = Math.random() * 4 + 3;
-    dollar.style.animationDuration = duration + 's';
-    
-    // Випадковий розмір (щоб була перспектива)
-    dollar.style.fontSize = Math.random() * 20 + 20 + 'px';
 
-    container.appendChild(dollar);
-
-    // Видаляємо елемент після завершення анімації, щоб не перевантажувати пам'ять
-    setTimeout(() => {
-        dollar.remove();
-    }, duration * 1000);
 }
 
 // Запускаємо створення доларів кожні 300 мс
